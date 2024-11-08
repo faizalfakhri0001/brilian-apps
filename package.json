@@ -4,12 +4,26 @@
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "android:dev:debug": "yarn android --variant developmentDebug",
+    "android:uat:debug": "yarn android --variant uatDebug",
+    "android:prod:debug": "yarn android --variant prodDebug",
+    "android:dev:release": "yarn android --variant developmentRelease",
+    "android:uatt:release": "yarn android --variant uatRelease",
+    "android:prod:release": "yarn android --variant prodRelease",
+    "ios": "expo run:ios",
+    "ios:dev:debug": "yarn ios --configuration",
+    "ios:aut:debug": "yarn ios --configuration",
+    "ios:prod:debug": "yarn ios --configuration",
+    "ios:dev:release": "yarn ios --configuration",
+    "ios:aut:release": "yarn ios --configuration",
+    "ios:prod:release": "yarn ios --configuration",
+    "ios:devices": "xcrun xctrace list devices",
     "web": "expo start --web"
   },
   "dependencies": {
     "expo": "~51.0.28",
+    "expo-splash-screen": "~0.27.6",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
     "react-native": "0.74.5"
@@ -19,5 +33,6 @@
     "@types/react": "~18.2.45",
     "typescript": "^5.1.3"
   },
-  "private": true
+  "private": true,
+  "packageManager": "yarn@3.6.4"
 }
